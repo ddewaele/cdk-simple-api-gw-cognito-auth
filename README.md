@@ -4,6 +4,44 @@ This AWS CDK stack sets up a simple REST API with Cognito authentication using A
 
 ## Architecture Overview
 
+```
+  Client                  API Gateway               Cognito
+    |                          |                        |
+    |                          |    Request to          |
+    |                          | /idToken endpoint      |
+    |------------------------->|----------------------->|
+    |                          |                        |
+    |                          |   Validate ID token    |
+    |                          |   and authorize user   |
+    |                          |<-----------------------|
+    |                          |                        |
+    |                          |    Response with       |
+    |                          |    requested data      |
+    |<-------------------------|------------------------|
+    |                          |                        |
+    |                          |    Request to          |
+    |                          | /accessToken endpoint  |
+    |                          |    with access token   |
+    |------------------------->|----------------------->|
+    |                          |                        |
+    |                          |   Validate access     |
+    |                          |   token and custom     |
+    |                          |   scope                |
+    |                          |<-----------------------|
+    |                          |                        |
+    |                          |    Response with       |
+    |                          |    requested data      |
+    |<-------------------------|------------------------|
+    |                          |                        |
+    |                          |    Request to          |
+    |                          |   unsecure endpoint    |
+    |                          |----------------------->|
+    |                          |                        |
+    |                          |    Response with       |
+    |                          |    requested data      |
+    |<-------------------------|------------------------|
+```
+
 The stack provisions the following AWS resources:
 
 - **Amazon Cognito User Pool**: Manages user authentication for the API.
