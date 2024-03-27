@@ -7,39 +7,35 @@ This AWS CDK stack sets up a simple REST API with Cognito authentication using A
 ```
   Client                  API Gateway               Cognito
     |                          |                        |
-    |                          |    Request to          |
-    |                          | /idToken endpoint      |
-    |------------------------->|----------------------->|
-    |                          |                        |
-    |                          |   Validate ID token    |
-    |                          |   and authorize user   |
+    | Request to /idToken      |                        |
+    |------------------------->|                        |
+    |                          |    Validate ID token   |
+    |                          |    and authorize user  |
     |                          |<-----------------------|
-    |                          |                        |
-    |                          |    Response with       |
-    |                          |    requested data      |
+    | Response with requested  |                        |
+    | data                     |                        |
     |<-------------------------|------------------------|
     |                          |                        |
-    |                          |    Request to          |
-    |                          | /accessToken endpoint  |
-    |                          |    with access token   |
-    |------------------------->|----------------------->|
-    |                          |                        |
+    | Request to /accessToken  |                        |
+    | with access token        |                        |
+    |------------------------->|                        |
     |                          |   Validate access     |
     |                          |   token and custom     |
     |                          |   scope                |
     |                          |<-----------------------|
     |                          |                        |
-    |                          |    Response with       |
-    |                          |    requested data      |
+    | Response with requested  |                        |
+    | data                     |                        |
     |<-------------------------|------------------------|
     |                          |                        |
-    |                          |    Request to          |
-    |                          |   unsecure endpoint    |
-    |                          |----------------------->|
+    | Request to unsecure      |                        |
+    | endpoint                 |                        |
+    |------------------------->|                        |
     |                          |                        |
-    |                          |    Response with       |
-    |                          |    requested data      |
+    | Response with requested  |                        |
+    | data                     |                        |
     |<-------------------------|------------------------|
+
 ```
 
 The stack provisions the following AWS resources:
