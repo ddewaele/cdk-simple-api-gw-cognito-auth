@@ -1,0 +1,12 @@
+{
+  "name": "simple-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "locally": "node -e \"(async function() { console.log(await (await import('./index.mjs')).handler(require('./event.json'))); })();\""
+  },
+  "author": "",
+  "license": "ISC"
+}

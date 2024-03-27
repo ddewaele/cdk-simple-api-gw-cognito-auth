@@ -1,0 +1,14 @@
+{
+    "sub": "19ce5026-a3ea-489e-940a-6f4043627fde",
+    "iss": "https://cognito-idp.eu-central-1.amazonaws.com/eu-central-1_ZSoN7YorT",
+    "version": 2,
+    "client_id": "18srlb78p6grju2mt2r5i77j7s",
+    "origin_jti": "992909ce-ceb2-4977-b7ff-5d83ec9ab3fc",
+    "token_use": "access",
+    "scope": "test-resource-server1/user openid profile email",
+    "auth_time": 1711525182,
+    "exp": 1711528782,
+    "iat": 1711525182,
+    "jti": "1b6228b7-2682-4c15-a451-85e3a1b79522",
+    "username": "19ce5026-a3ea-489e-940a-6f4043627fde"
+  }

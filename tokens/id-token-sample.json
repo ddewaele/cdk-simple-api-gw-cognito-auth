@@ -1,0 +1,15 @@
+{
+    "sub": "19ce5026-a3ea-489e-940a-6f4043627fde",
+    "email_verified": true,
+    "iss": "https://cognito-idp.eu-central-1.amazonaws.com/eu-central-1_ZSoN7YorT",
+    "cognito:username": "19ce5026-a3ea-489e-940a-6f4043627fde",
+    "origin_jti": "c4f5d4c3-72cc-4836-946d-cba19f8965b9",
+    "aud": "5o9epe3t1svc2eredv45sis933",
+    "event_id": "c28a17b6-6c0b-4401-94ac-bc3f84070a5b",
+    "token_use": "id",
+    "auth_time": 1711523130,
+    "exp": 1711526730,
+    "iat": 1711523130,
+    "jti": "304c1c9d-e264-43cb-a82c-843ea41db2c6",
+    "email": "some@email.com"
+  }
